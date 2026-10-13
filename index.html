@@ -1,0 +1,632 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Social Media Strategy · Chapter 9</title>
+<meta name="description" content="Digital Marketing Chapter 9: plan a social media campaign, choose platforms, and measure results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f8fb;--surface:#ffffff;--surface-2:#eef2f7;--ink:#0f1f3a;--ink-2:#44526b;--muted:#6b778c;--line:#dbe2ec;--brand:#0b2a55;--accent:#1f7ae0;--accent-soft:#e3efff;--good:#1a8a5a;--good-soft:#e2f5ec;--bad:#c23b3b;--bad-soft:#fbe7e7;--warn:#b7791f;--warn-soft:#fdf3e1;--bar-a:#94a3b8;--bar-b:#1f7ae0;--radius:14px;--shadow:0 1px 2px rgba(15,31,58,.06),0 4px 16px rgba(15,31,58,.06)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1220;--surface:#121b2d;--surface-2:#1a2540;--ink:#e7edf7;--ink-2:#b4c0d4;--muted:#8a97ad;--line:#26324b;--brand:#9cc3ff;--accent:#5aa2ff;--accent-soft:#16294a;--good:#4cc98f;--good-soft:#123326;--bad:#ff7b7b;--bad-soft:#3a1717;--warn:#f0b955;--warn-soft:#3a2b10;--bar-a:#64748b;--bar-b:#5aa2ff;--shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25)}}
+:root[data-theme="dark"]{--bg:#0b1220;--surface:#121b2d;--surface-2:#1a2540;--ink:#e7edf7;--ink-2:#b4c0d4;--muted:#8a97ad;--line:#26324b;--brand:#9cc3ff;--accent:#5aa2ff;--accent-soft:#16294a;--good:#4cc98f;--good-soft:#123326;--bad:#ff7b7b;--bad-soft:#3a1717;--warn:#f0b955;--warn-soft:#3a2b10;--bar-a:#64748b;--bar-b:#5aa2ff;--shadow:0 1px 2px rgba(0,0,0,.3),0 4px 16px rgba(0,0,0,.25)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:12px;height:56px}
+.logo{font-weight:800;color:var(--brand);text-decoration:none;white-space:nowrap}
+nav.toc{display:flex;gap:4px;overflow-x:auto;flex:1;scrollbar-width:none}
+nav.toc::-webkit-scrollbar{display:none}
+nav.toc a{font-size:13px;font-weight:600;color:var(--ink-2);text-decoration:none;padding:6px 10px;border-radius:8px;white-space:nowrap}
+nav.toc a:hover,nav.toc a.on{background:var(--accent-soft);color:var(--accent)}
+.theme-btn{border:1px solid var(--line);background:var(--surface);color:var(--ink);width:34px;height:34px;border-radius:8px;cursor:pointer;font-size:16px;flex:none}
+.hero{padding:64px 0 40px}
+.eyebrow{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--accent)}
+h1{font-size:clamp(34px,6vw,56px);line-height:1.05;color:var(--brand);letter-spacing:-.02em;margin:10px 0 16px}
+.lede{font-size:19px;color:var(--ink-2);max-width:720px;margin:0 0 28px}
+.objectives{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.obj,.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.obj b{display:block;font-size:13px;color:var(--accent);margin-bottom:4px}
+section{padding:44px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,3.5vw,32px);color:var(--brand);letter-spacing:-.01em;line-height:1.2;margin:0 0 8px}
+h3{font-size:17px;margin:0 0 6px;color:var(--ink)}
+.sub{color:var(--ink-2);margin:0 0 22px;max-width:760px}
+.grid{display:grid;gap:12px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card p{margin:0;color:var(--ink-2);font-size:15px}
+.tag{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 9px;border-radius:99px;margin-bottom:8px}
+.t-paid{background:var(--accent-soft);color:var(--accent)}
+.t-good{background:var(--good-soft);color:var(--good)}
+.t-bad{background:var(--bad-soft);color:var(--bad)}
+.t-warn{background:var(--warn-soft);color:var(--warn)}
+.update{background:var(--warn-soft);border:1px solid color-mix(in srgb,var(--warn) 35%,transparent);border-radius:10px;padding:14px 16px;margin:18px 0;color:var(--ink);font-size:15px}
+.update b{color:var(--warn)}
+.formula{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface-2);border-radius:8px;padding:10px 14px;font-size:15px;margin:10px 0;overflow-x:auto}
+.btn{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);padding:8px 14px;border-radius:10px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}
+.tabs button{font:inherit;font-size:14px;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:7px 14px;border-radius:99px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.flow{display:flex;align-items:stretch;gap:8px;flex-wrap:wrap}
+.flow .step{flex:1 1 150px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;box-shadow:var(--shadow);position:relative}
+.flow .step .n{font-size:12px;font-weight:800;color:var(--accent)}
+.flow .arrow{align-self:center;color:var(--muted);font-weight:700}
+@media (max-width:640px){.flow .arrow{display:none}}
+.sorter .item{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px}
+.sorter .item .lbl{font-weight:600}
+.sorter .opts{display:flex;gap:6px;flex-wrap:wrap}
+.opts button{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);padding:6px 12px;border-radius:10px;cursor:pointer}
+.opts button.right{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.opts button.wrong{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.opts button:disabled{cursor:default}
+.fb{font-size:14px;color:var(--ink-2);flex-basis:100%;display:none}
+.fb.show{display:block}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:100px 1fr 48px;align-items:center;gap:10px;font-size:14px}
+.bar .track{background:var(--surface-2);border-radius:4px;height:22px;overflow:hidden}
+.bar .fill{height:100%;background:var(--bar-b);border-radius:4px;transition:width .4s}
+.bar .val{font-weight:700;text-align:right}
+.note{font-size:13px;color:var(--muted);margin-top:10px}
+.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;align-items:start}
+.field{margin-bottom:14px}
+.field label{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:4px}
+.field label span{color:var(--accent)}
+.field label em{color:var(--ink)}
+input[type=range]{width:100%;accent-color:var(--accent)}
+input[type=number]{width:100%;font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink)}
+.big{font-size:40px;font-weight:800;color:var(--brand);line-height:1.1}
+.verdict{display:inline-block;margin-top:6px;font-weight:700;padding:4px 10px;border-radius:99px;font-size:14px}
+svg text{fill:var(--ink-2);font-family:Inter,system-ui,sans-serif}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--ink-2);margin-top:8px}
+.legend i{display:inline-block;width:14px;height:4px;border-radius:2px;vertical-align:middle;margin-right:6px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-top:10px}
+details summary{cursor:pointer;font-weight:700;color:var(--accent)}
+details[open] summary{margin-bottom:8px}
+details ul{margin:6px 0 0;padding-left:20px;color:var(--ink-2);font-size:15px}
+textarea{width:100%;font:inherit;font-size:14px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);color:var(--ink);resize:vertical;min-height:44px}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:12px}
+.plan-grid label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.case-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:baseline}
+.quiz .q{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px;margin-bottom:12px;box-shadow:var(--shadow)}
+.quiz .q p{margin:0 0 10px;font-weight:600}
+.quiz .opts{display:grid;gap:6px}
+.quiz .opts button{text-align:left;padding:10px 12px}
+.score{display:flex;align-items:center;gap:12px;margin:14px 0}
+dl.terms{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:0}
+dl.terms div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+dl.terms dt{font-weight:700;color:var(--brand)}
+dl.terms dd{margin:2px 0 0;color:var(--ink-2);font-size:14px}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.compare{grid-template-columns:1fr}}
+.thought{background:var(--accent-soft);border-radius:18px;padding:16px 18px;color:var(--ink);font-size:15px;margin-top:16px}
+.thought b{color:var(--accent)}
+footer{border-top:1px solid var(--line);padding:28px 0 48px;color:var(--muted);font-size:13px}
+@media (max-width:640px){.wrap{padding:0 16px}.hero{padding:40px 0 24px}section{padding:32px 0}.bar{grid-template-columns:80px 1fr 42px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top">Ch 9</a>
+  <nav class="toc" id="toc">
+    <a href="#doing">Doing social</a>
+    <a href="#posting">Posting</a>
+    <a href="#poe">Paid/Owned/Earned</a>
+    <a href="#plan">The plan</a>
+    <a href="#platform">Platforms</a>
+    <a href="#content">Content</a>
+    <a href="#metrics">Metrics</a>
+    <a href="#virality">Virality</a>
+    <a href="#wom">Word of mouth</a>
+    <a href="#cases">Cases</a>
+    <a href="#quiz">Quiz</a>
+  </nav>
+  <button class="theme-btn" id="themeBtn" aria-label="Toggle dark mode">◐</button>
+</div></header>
+
+<main id="top">
+<div class="wrap">
+<div class="hero">
+  <div class="eyebrow">Digital Marketing · Chapter 9</div>
+  <h1>Social Media Strategy</h1>
+  <p class="lede">On social media, you're a guest on someone else's platform, and the platform decides who sees your posts. A good strategy starts from that fact instead of fighting it.</p>
+  <div class="objectives">
+    <div class="obj"><b>Objective 1</b>Describe the parts of a social media campaign plan and use it to design a campaign.</div>
+    <div class="obj"><b>Objective 2</b>Choose the best platform(s) for different social media goals.</div>
+    <div class="obj"><b>Objective 3</b>Pick the measures that show whether a campaign worked.</div>
+  </div>
+</div>
+</div>
+
+<!-- 1 -->
+<section id="doing"><div class="wrap">
+  <h2>"Doing social media" is more than posting</h2>
+  <p class="sub">Most people think social media marketing means posting on a company profile. Posting is only one of eight activities, and usually not the one that makes the most money.</p>
+  <div class="grid g4">
+    <div class="card"><span class="tag t-warn">Owned</span><h3>Posting content</h3><p>Free to do, but platforms show brand posts to few people.</p></div>
+    <div class="card"><span class="tag t-paid">Goal</span><h3>Creating new customers</h3><p>Usually done best with ads, not posts.</p></div>
+    <div class="card"><span class="tag t-paid">Goal</span><h3>Increasing loyalty</h3><p>Keeping past customers coming back. Posting works better here.</p></div>
+    <div class="card"><span class="tag t-warn">Indirect</span><h3>SEO</h3><p>Shared content earns links, which help search rankings a little.</p></div>
+    <div class="card"><span class="tag t-good">Strongest</span><h3>Paid advertising</h3><p>Targeted ads are the most reliable way to find new customers on social.</p></div>
+    <div class="card"><span class="tag t-paid">Defense</span><h3>Reputation management</h3><p>Protecting how the brand is seen when things go wrong.</p></div>
+    <div class="card"><span class="tag t-paid">Close-up</span><h3>Social monitoring</h3><p>Reading specific comments about the brand and replying to them.</p></div>
+    <div class="card"><span class="tag t-paid">Big picture</span><h3>Social listening</h3><p>Summarizing the whole conversation about a brand or topic.</p></div>
+  </div>
+  <div class="thought"><b>Watch out:</b> social listening is cheap research, but people who post about a brand aren't a typical sample of its customers. Angry and very happy customers post; most customers say nothing.</div>
+</div></section>
+
+<!-- 2 -->
+<section id="posting"><div class="wrap">
+  <h2>Why posting is harder than it looks</h2>
+  <p class="sub">Three problems limit how much a company's posts can do. The third is the one most people miss.</p>
+  <div class="grid g3">
+    <div class="card"><span class="tag t-bad">Problem 1</span><h3>People don't follow brands</h3><p>Users come to social media to be entertained, not sold to.</p></div>
+    <div class="card"><span class="tag t-bad">Problem 2</span><h3>Platforms limit brand reach</h3><p>Platforms would rather you pay for reach, so free brand posts get shown to few followers.</p></div>
+    <div class="card"><span class="tag t-bad">Problem 3</span><h3>Seeing isn't buying</h3><p>Even when people see your post, it may not change what they buy. Ask what the post teaches or offers.</p></div>
+  </div>
+  <div class="update"><b>What's changed:</b> feeds on Facebook, Instagram, TikTok and YouTube now fill up with posts from accounts people <em>don't</em> follow, picked by an algorithm. Follower count matters less than it used to, and one post that people engage with can travel far beyond your followers. Most brand posts still reach very few people for free.</div>
+
+  <h3 style="margin-top:26px">The loyalty path</h3>
+  <p class="sub" style="margin-bottom:14px">Social media works best as part of a longer relationship. Click a step to see what to measure there.</p>
+  <div class="flow" id="loyalty">
+    <button class="step btn" data-k="a" style="text-align:left"><div class="n">STEP 1</div><b>Acquisition</b><div style="font-size:14px;color:var(--ink-2);font-weight:400">Get a way to reach the person again</div></button>
+    <div class="arrow">→</div>
+    <button class="step btn" data-k="e" style="text-align:left"><div class="n">STEP 2</div><b>Engagement</b><div style="font-size:14px;color:var(--ink-2);font-weight:400">Keep showing up with something useful</div></button>
+    <div class="arrow">→</div>
+    <button class="step btn" data-k="l" style="text-align:left"><div class="n">STEP 3</div><b>Loyalty</b><div style="font-size:14px;color:var(--ink-2);font-weight:400">Repeat and larger purchases</div></button>
+  </div>
+  <div class="card" style="margin-top:10px"><span class="tag t-good">Analysis runs under every step</span><p id="loyaltyOut">"Acquisition" can mean a follower, a first purchase or an email address: any connection that lets you reach the person again. Pick a step above.</p></div>
+</div></section>
+
+<!-- 3 -->
+<section id="poe"><div class="wrap">
+  <h2>Paid, owned and earned media</h2>
+  <p class="sub"><b>Paid:</b> you buy the exposure. <b>Owned:</b> you control the channel. <b>Earned:</b> other people give you the exposure. Sort each item below.</p>
+  <div class="sorter" id="sorter"></div>
+  <div class="score"><b id="sortScore">0 / 0</b><button class="btn" id="sortReset">Start over</button></div>
+  <div class="grid g3" style="margin-top:10px">
+    <div class="card"><span class="tag t-paid">All paid</span><p>Reliable, but costs rise as easy customers run out, and it's an expensive way to keep the customers you already have.</p></div>
+    <div class="card"><span class="tag t-paid">All owned</span><p>No way to find anyone new.</p></div>
+    <div class="card"><span class="tag t-paid">All earned</span><p>Fragile. Upworthy built a huge site on viral sharing, and lost most of its traffic when Facebook changed its algorithm.</p></div>
+  </div>
+  <div class="thought"><b>Earned media is a lottery ticket.</b> Most efforts return little, but a few return 100 times what they cost. It's worth some effort, but it can't be the foundation.</div>
+</div></section>
+
+<!-- 4 -->
+<section id="plan"><div class="wrap">
+  <h2>The social media plan</h2>
+  <p class="sub">Five steps, in this order. The most common mistake is starting with step 2 ("we should be on TikTok") before deciding step 1.</p>
+  <div class="flow">
+    <div class="step"><div class="n">1</div><b>Objective</b><div style="font-size:14px;color:var(--ink-2)">New customers, loyalty, or insight?</div></div>
+    <div class="step"><div class="n">2</div><b>Platform</b><div style="font-size:14px;color:var(--ink-2)">Where your customers pay attention</div></div>
+    <div class="step"><div class="n">3</div><b>Content</b><div style="font-size:14px;color:var(--ink-2)">What value, what format, from where</div></div>
+    <div class="step"><div class="n">4</div><b>Distribute &amp; promote</b><div style="font-size:14px;color:var(--ink-2)">Organic reach, ads, targeting</div></div>
+    <div class="step"><div class="n">5</div><b>Measure</b><div style="font-size:14px;color:var(--ink-2)">Metrics that match the objective</div></div>
+  </div>
+
+  <h3 style="margin-top:28px">Seven possible objectives</h3>
+  <p class="sub" style="margin-bottom:12px">Some work far more often than others.</p>
+  <div class="grid g2" id="objs"></div>
+</div></section>
+
+<!-- 5 -->
+<section id="platform"><div class="wrap">
+  <h2>Choosing a platform</h2>
+  <p class="sub">Count potential customers, not total users. A huge platform full of people who will never buy from you is worth less than a small one full of buyers.</p>
+  <div class="calc">
+    <div class="card">
+      <h3>Share of U.S. adults who use each platform</h3>
+      <div class="bars" id="pew"></div>
+      <p class="note">Source: Pew Research Center, survey of 5,022 U.S. adults, Feb–June 2025.</p>
+    </div>
+    <div class="card">
+      <h3>Six questions to ask</h3>
+      <p style="margin-bottom:8px"><b>About the platform</b></p>
+      <ul style="margin:0 0 10px;padding-left:20px;color:var(--ink-2);font-size:15px">
+        <li><b>Users:</b> are my potential customers here?</li>
+        <li><b>Interaction:</b> do people slow down, or scroll fast?</li>
+        <li><b>Ad tools:</b> can I target and measure well?</li>
+      </ul>
+      <p style="margin-bottom:8px"><b>About the ads</b></p>
+      <ul style="margin:0;padding-left:20px;color:var(--ink-2);font-size:15px">
+        <li><b>Attention:</b> will the ad actually be noticed?</li>
+        <li><b>Targeting:</b> can I skip people who will never buy?</li>
+        <li><b>Cost:</b> is it cheap enough to pay off?</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:12px">
+    <div class="card"><h3>Facebook &amp; Instagram</h3><p>Meta's ad system is the default starting point for most consumer brands: huge reach and strong tools.</p></div>
+    <div class="card"><h3>TikTok</h3><p>Short vertical video and a feed driven almost entirely by recommendations. Strong for audiences under 35.</p></div>
+    <div class="card"><h3>YouTube</h3><p>The most-used platform. Skippable ads are guaranteed only 5 seconds, so the opening has to grab people.</p></div>
+    <div class="card"><h3>LinkedIn</h3><p>The first choice for B2B. Ads are expensive, so they need to convert better to pay off.</p></div>
+    <div class="card"><h3>Pinterest</h3><p>People come here to plan purchases and projects, which suits home, food, fashion and parenting brands.</p></div>
+    <div class="card"><h3>X &amp; Snapchat</h3><p>X users scroll fast past ads; Snapchat skews young and needs content made for it.</p></div>
+  </div>
+  <div class="update"><b>What's changed:</b> since Apple's 2021 privacy change limited tracking, Meta has cut many detailed targeting options and pushes automated "Advantage+" campaigns that pick the audience for you. The ad itself now does much of the targeting: an ad about screen-free afternoons finds a different parent than an ad about better grades.</div>
+</div></section>
+
+<!-- 6 -->
+<section id="content"><div class="wrap">
+  <h2>Planning content</h2>
+  <p class="sub">Nobody follows a brand unless it gives them something. Decide what value you're offering, in what format, and where the content comes from.</p>
+  <div class="tabs" role="tablist" id="ctabs">
+    <button role="tab" aria-selected="true" data-t="value">Types of value</button>
+    <button role="tab" aria-selected="false" data-t="media">Formats</button>
+    <button role="tab" aria-selected="false" data-t="source">Sources</button>
+    <button role="tab" aria-selected="false" data-t="style">Style guide</button>
+  </div>
+  <div id="cpanel"></div>
+</div></section>
+
+<!-- 7 -->
+<section id="metrics"><div class="wrap">
+  <h2>Measuring success</h2>
+  <p class="sub">Judge each post against its purpose. A post meant to build goodwill shouldn't be graded on sales, and a sales post shouldn't be graded on likes.</p>
+  <div class="grid g3">
+    <div class="card"><span class="tag t-warn">Volume</span><h3>How many saw it</h3><p>Followers, impressions. Follower count is a <b>vanity metric</b>: it looks good and rarely tracks profit.</p></div>
+    <div class="card"><span class="tag t-paid">Engagement</span><h3>Did they interact</h3><p>Likes, comments, shares, saves, engagement rate. Shares and saves mean the most.</p></div>
+    <div class="card"><span class="tag t-good">Conversion</span><h3>Did they act</h3><p>Click-through rate, conversion rate, share of followers who bought.</p></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>Engagement rate calculator</h3>
+    <div class="formula">Engagement rate = (likes + comments + shares + saves) ÷ reach</div>
+    <div class="calc" style="margin-top:12px">
+      <div>
+        <div class="grid" style="gap:0 10px;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
+          <div class="field"><label>Reach</label><input type="number" id="er-reach" value="20000" min="1"></div>
+          <div class="field"><label>Likes</label><input type="number" id="er-likes" value="600" min="0"></div>
+          <div class="field"><label>Comments</label><input type="number" id="er-com" value="80" min="0"></div>
+          <div class="field"><label>Shares</label><input type="number" id="er-sh" value="120" min="0"></div>
+          <div class="field"><label>Saves</label><input type="number" id="er-sv" value="200" min="0"></div>
+        </div>
+      </div>
+      <div>
+        <div style="font-size:14px;color:var(--muted);font-weight:600">Engagement rate</div>
+        <div class="big" id="er-out">5.0%</div>
+        <p id="er-mix" style="color:var(--ink-2);font-size:15px;margin-top:8px"></p>
+      </div>
+    </div>
+    <p class="note">Older textbooks divide likes by followers. Because feeds now show posts to many non-followers, most tools divide all engagements by reach or impressions.</p>
+  </div>
+
+  <div class="grid g2" style="margin-top:16px">
+    <div class="card"><span class="tag t-paid">Ads</span><h3>Measuring social ads</h3><p>Social ads are display ads in a feed, so use the Chapter 7 metrics: impressions, click-through rate, conversion rate and cost per acquisition. For video, add view-through rate.</p></div>
+    <div class="card"><span class="tag t-paid">Listening</span><h3>Volume + sentiment</h3><p>Neither means much alone. Together they're an alarm: <b>mentions spike while sentiment drops = a brand crisis in progress.</b></p>
+      <svg viewBox="0 0 300 110" width="100%" role="img" aria-label="Illustration: mentions spike on day 6 while positive sentiment falls">
+        <line x1="20" y1="90" x2="290" y2="90" stroke="var(--line)"/>
+        <polyline fill="none" stroke="var(--bar-b)" stroke-width="2.5" points="20,80 60,78 100,81 140,79 180,30 220,22 260,50 290,70"/>
+        <polyline fill="none" stroke="var(--bad)" stroke-width="2.5" stroke-dasharray="5 4" points="20,30 60,32 100,29 140,31 180,72 220,78 260,65 290,55"/>
+        <text x="182" y="18" font-size="11">Crisis</text>
+      </svg>
+      <div class="legend"><span><i style="background:var(--bar-b)"></i>Mentions</span><span><i style="background:var(--bad)"></i>% positive</span></div>
+      <p class="note" style="margin-top:4px">Illustration, not real data.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- 8 -->
+<section id="virality"><div class="wrap">
+  <h2>What makes content go viral</h2>
+  <p class="sub">Every person who watches creates X more views. If X is above 1, views keep growing. If it's below 1, the content fades out.</p>
+  <div class="formula">X = p<sub>f</sub> × N × p<sub>v</sub></div>
+  <div class="card" style="margin-top:12px">
+    <div class="calc">
+      <div>
+        <div class="field"><label><em style="font-style:normal">p<sub>f</sub>: chance a viewer shares it</em> <span id="pfV"></span></label><input type="range" id="pf" min="0" max="20" step="0.5" value="5"></div>
+        <div class="field"><label><em style="font-style:normal">N: people who see each share</em> <span id="nV"></span></label><input type="range" id="n" min="10" max="500" step="10" value="200"></div>
+        <div class="field"><label><em style="font-style:normal">p<sub>v</sub>: chance they watch the share</em> <span id="pvV"></span></label><input type="range" id="pv" min="1" max="50" step="1" value="15"></div>
+        <button class="btn" id="vReset">Reset</button>
+      </div>
+      <div>
+        <div style="font-size:14px;color:var(--muted);font-weight:600">Each viewer creates</div>
+        <div class="big"><span id="xOut">1.50</span> views</div>
+        <span class="verdict" id="xVerdict"></span>
+        <p style="font-size:14px;color:var(--ink-2);margin:14px 0 6px">Views per round, starting from 1,000 viewers:</p>
+        <div class="bars" id="gens"></div>
+      </div>
+    </div>
+  </div>
+  <div class="grid g3" style="margin-top:12px">
+    <div class="card"><h3>Raise p<sub>f</sub></h3><p>Surprise, humor, timeliness, controversy, a share button. <b>This is the one that matters most.</b></p></div>
+    <div class="card"><h3>Raise N</h3><p>You rarely control it, except by paying to promote the post.</p></div>
+    <div class="card"><h3>Raise p<sub>v</sub></h3><p>A strong thumbnail and a clear title.</p></div>
+  </div>
+  <div class="thought"><b>The formula's blind spot:</b> friend groups overlap. When you share a video, many of your friends have already seen it. Content can saturate one group (your campus, say) and never get out.</div>
+
+  <h3 style="margin-top:30px">Viral isn't the same as persuasive</h3>
+  <p class="sub" style="margin-bottom:12px">Catherine Tucker (MIT) showed 24,367 people one of 396 viral video ads, or an unrelated video as a control, then asked how likely they were to buy the brand.</p>
+  <div class="compare">
+    <div class="card"><span class="tag t-good">Finding 1</span><h3>Seeing the ad helped</h3><p>People who watched an ad were more likely to say they'd buy than people who watched the control video.</p></div>
+    <div class="card"><span class="tag t-bad">Finding 2</span><h3>More views, less persuasion</h3><p>The more viral the ad, the less it raised purchase intent. To get shared, ads went funny or outrageous and dropped the sales message.</p></div>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><span class="tag t-good">Still persuasive</span><p><b>Humor</b> and <b>strong visuals</b> got shared without losing much persuasive power.</p></div>
+    <div class="card"><span class="tag t-bad">Less persuasive</span><p><b>Outrageous</b> content got shared but persuaded less.</p></div>
+  </div>
+  <p class="note">Tucker, C. (2015). The reach and persuasiveness of viral video ads. <em>Marketing Science</em>.</p>
+</div></section>
+
+<!-- 9 -->
+<section id="wom"><div class="wrap">
+  <h2>Word of mouth beats almost everything</h2>
+  <p class="sub">Researchers tracked sign-ups at a social networking site after three kinds of boosts: a friend's referral, a mention in the press, and a marketing event.</p>
+  <div class="card">
+    <svg viewBox="0 0 640 260" width="100%" role="img" aria-label="Approximate curves: referrals start highest and last about three weeks; press and events fade within about a week">
+      <g font-size="12">
+        <line x1="50" y1="220" x2="620" y2="220" stroke="var(--line)"/>
+        <line x1="50" y1="20" x2="50" y2="220" stroke="var(--line)"/>
+        <text x="40" y="224" text-anchor="end">0</text><text x="40" y="164" text-anchor="end">1</text><text x="40" y="104" text-anchor="end">2</text>
+        <line x1="50" y1="160" x2="620" y2="160" stroke="var(--line)" stroke-dasharray="3 4"/>
+        <line x1="50" y1="100" x2="620" y2="100" stroke="var(--line)" stroke-dasharray="3 4"/>
+        <text x="50" y="240" text-anchor="middle">1</text><text x="240" y="240" text-anchor="middle">10</text><text x="430" y="240" text-anchor="middle">20</text><text x="610" y="240" text-anchor="middle">29</text>
+        <text x="335" y="257" text-anchor="middle">Days after the boost</text>
+        <text x="14" y="120" transform="rotate(-90 14 120)" text-anchor="middle">Extra sign-ups</text>
+      </g>
+      <path id="wRef" fill="none" stroke="var(--bar-b)" stroke-width="3" d=""/>
+      <path id="wMed" fill="none" stroke="var(--warn)" stroke-width="3" d=""/>
+      <path id="wEvt" fill="none" stroke="var(--bar-a)" stroke-width="3" d=""/>
+    </svg>
+    <div class="legend"><span><i style="background:var(--bar-b)"></i>Referral (word of mouth)</span><span><i style="background:var(--warn)"></i>Press coverage</span><span><i style="background:var(--bar-a)"></i>Marketing event</span></div>
+    <p class="note">Approximate curves redrawn from Trusov, Bucklin &amp; Pauwels (2009), <em>Journal of Marketing</em>.</p>
+  </div>
+  <div class="grid g2" style="margin-top:12px">
+    <div class="card"><span class="tag t-good">Bigger</span><p>A referral produced the largest jump in sign-ups.</p></div>
+    <div class="card"><span class="tag t-good">Longer</span><p>The referral effect lasted about three weeks. Press and events faded within about a week.</p></div>
+  </div>
+  <div class="thought"><b>Why it matters:</b> over the long run, referrals were roughly 20–30 times as effective as events or press mentions. That's why so many companies pay customers to refer friends.</div>
+</div></section>
+
+<!-- 10 -->
+<section id="cases"><div class="wrap">
+  <h2>Practice: build the plan</h2>
+  <p class="sub">For each company, fill in the five steps, then compare with a suggested answer. There's more than one good answer; what matters is that each step follows from the objective.</p>
+  <div id="caseList"></div>
+</div></section>
+
+<!-- 11 -->
+<section id="quiz"><div class="wrap">
+  <h2>Check your understanding</h2>
+  <div class="score"><b id="qScore">Score: 0 / 8</b><button class="btn" id="qReset">Start over</button></div>
+  <div class="quiz" id="qList"></div>
+</div></section>
+
+<!-- 12 -->
+<section id="terms"><div class="wrap">
+  <h2>Key terms</h2>
+  <dl class="terms">
+    <div><dt>Organic content</dt><dd>Posts a company publishes for free on its own profiles.</dd></div>
+    <div><dt>Paid media</dt><dd>Exposure you buy: social, search and display ads, affiliates.</dd></div>
+    <div><dt>Owned media</dt><dd>Channels you control: website, social profiles, email list.</dd></div>
+    <div><dt>Earned media</dt><dd>Exposure others give you: shares, press, word of mouth, SEO.</dd></div>
+    <div><dt>Social monitoring</dt><dd>Reading and replying to specific posts about the brand.</dd></div>
+    <div><dt>Social listening</dt><dd>Summarizing the overall conversation about a brand or topic.</dd></div>
+    <div><dt>Style guide</dt><dd>Rules for tone, responses and content so many posters sound like one brand.</dd></div>
+    <div><dt>User-generated content</dt><dd>Photos, videos and reviews made by customers rather than the brand.</dd></div>
+    <div><dt>Curated content</dt><dd>Good content from others that the brand shares.</dd></div>
+    <div><dt>Vanity metric</dt><dd>A number that looks impressive but doesn't track profit, like follower count.</dd></div>
+    <div><dt>Engagement rate</dt><dd>Total interactions divided by reach or impressions.</dd></div>
+    <div><dt>Sentiment</dt><dd>The share of posts about a brand that are positive, neutral or negative.</dd></div>
+    <div><dt>Virality (X)</dt><dd>New views each viewer creates: p<sub>f</sub> × N × p<sub>v</sub>. Above 1 means it spreads.</dd></div>
+    <div><dt>Word of mouth (WOM)</dt><dd>People recommending a product to each other, in person or online.</dd></div>
+  </dl>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+Digital Marketing · Chapter 9: Social Media Strategy. Research cited: Tucker (2015), <em>Marketing Science</em>; Trusov, Bucklin &amp; Pauwels (2009), <em>Journal of Marketing</em>; Pew Research Center, "Americans' Social Media Use" (2025).
+</div></footer>
+
+<script>
+(function(){
+  // theme
+  const root=document.documentElement, tb=document.getElementById('themeBtn');
+  try{const s=localStorage.getItem('ch9-theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  tb.addEventListener('click',()=>{
+    const dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme')==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const next = dark?'light':'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem('ch9-theme',next);}catch(e){}
+  });
+
+  // nav highlight
+  const links=[...document.querySelectorAll('nav.toc a')];
+  const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')==='#'+e.target.id));}})},{rootMargin:'-40% 0px -55% 0px'});
+  links.forEach(l=>{const s=document.querySelector(l.getAttribute('href')); if(s) obs.observe(s);});
+
+  // loyalty path
+  const loy={a:"<b>Measure acquisition:</b> how many new connections, how fast, and how good they are (do they ever buy?).",
+             e:"<b>Measure engagement:</b> how often people interact and whether the interactions are positive. Also check the arrow: do acquired people actually engage?",
+             l:"<b>Measure loyalty:</b> how often people buy, how much, and through which channels. Check the arrow: does engagement lead to repeat purchases?"};
+  document.querySelectorAll('#loyalty .step').forEach(b=>b.addEventListener('click',()=>{document.getElementById('loyaltyOut').innerHTML=loy[b.dataset.k];}));
+
+  // sorter
+  const items=[
+    ["Instagram ad for a new sneaker","Paid","You bought the placement."],
+    ["The company's email newsletter","Owned","You control the list and the channel."],
+    ["A customer posts a video praising your product","Earned","Someone else gave you the exposure."],
+    ["Google search ad","Paid","You pay per click."],
+    ["The brand's TikTok profile","Owned","You control the profile, though not who sees it."],
+    ["A news site writes about your launch","Earned","Press coverage is earned."],
+    ["Ranking #1 in Google's organic results","Earned","SEO traffic is earned, not bought."],
+    ["The company website","Owned","The core owned channel."],
+    ["Paying an affiliate a commission per sale","Paid","Affiliate marketing is paid media."]
+  ];
+  const sorter=document.getElementById('sorter'); let sR=0,sD=0;
+  function buildSorter(){
+    sorter.innerHTML=''; sR=0; sD=0; updS();
+    items.forEach(([lbl,ans,why])=>{
+      const d=document.createElement('div'); d.className='item';
+      d.innerHTML=`<span class="lbl">${lbl}</span><span class="opts"></span><span class="fb"></span>`;
+      const o=d.querySelector('.opts'), fb=d.querySelector('.fb');
+      ['Paid','Owned','Earned'].forEach(c=>{
+        const b=document.createElement('button'); b.textContent=c;
+        b.onclick=()=>{
+          o.querySelectorAll('button').forEach(x=>{x.disabled=true; if(x.textContent===ans) x.classList.add('right');});
+          if(c!==ans) b.classList.add('wrong'); else sR++;
+          sD++; fb.textContent=(c===ans?'Correct. ':'It\'s '+ans+'. ')+why; fb.classList.add('show'); updS();
+        };
+        o.appendChild(b);
+      });
+      sorter.appendChild(d);
+    });
+  }
+  function updS(){document.getElementById('sortScore').textContent=sR+' / '+sD+' correct';}
+  document.getElementById('sortReset').onclick=buildSorter; buildSorter();
+
+  // objectives
+  const objs=[
+    ["New customers through posts","bad","Rarely works","Few people follow brands, and brand posts reach few of them."],
+    ["New customers through ads","good","Usually works","The main growth engine, if the targeting and the ad are good."],
+    ["New customers through search (via social)","warn","Small effect","Shared content earns links that help search a little. Do basic SEO first."],
+    ["Loyalty through posts","warn","Sometimes","Useful for past customers, but limited by how few followers see posts."],
+    ["Loyalty through ads","good","Often works","Pay to reach your own customers, like a retailer promoting its annual sale to past shoppers."],
+    ["Loyalty through monitoring","good","Works for loyalty","Good replies keep customers; they rarely win new ones."],
+    ["Insights through listening","warn","Use with care","Cheap and broad, but you can't ask it a specific question, and posters aren't typical customers."]
+  ];
+  document.getElementById('objs').innerHTML=objs.map(([t,c,l,d])=>`<div class="card"><span class="tag t-${c}">${l}</span><h3>${t}</h3><p>${d}</p></div>`).join('');
+
+  // pew
+  const pew=[["YouTube",84],["Facebook",71],["Instagram",50],["TikTok",37],["WhatsApp",32]];
+  document.getElementById('pew').innerHTML=pew.map(([p,v])=>`<div class="bar"><span>${p}</span><div class="track"><div class="fill" style="width:${v}%"></div></div><span class="val">${v}%</span></div>`).join('');
+
+  // content tabs
+  const panels={
+    value:`<div class="grid g3">
+      <div class="card"><h3>Entertainment</h3><p>Why most people are on the platform. Earns attention, but rarely changes what they buy.</p></div>
+      <div class="card"><h3>Utility</h3><p>Tips, how-tos, useful information. More likely to change behavior.</p></div>
+      <div class="card"><h3>Discounts</h3><p>A direct reason to follow and to buy.</p></div>
+      <div class="card"><h3>Product information</h3><p>New products, features, training. <b>A new-product post usually beats a funny video for sales.</b></p></div>
+      <div class="card"><h3>Contests &amp; drawings</h3><p>Boost engagement fast; make sure entrants are real potential customers.</p></div>
+      <div class="card"><h3>Social connection</h3><p>Works for lifestyle brands. Most brands can't build it, so don't assume customers want it.</p></div></div>`,
+    media:`<div class="card"><p style="margin-bottom:12px">Platforms reward formats that keep people on the platform. Roughly from most to least favored:</p>
+      <div class="bars">
+        <div class="bar"><span>Short video</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">1</span></div>
+        <div class="bar"><span>Live video</span><div class="track"><div class="fill" style="width:85%"></div></div><span class="val">2</span></div>
+        <div class="bar"><span>Longer video</span><div class="track"><div class="fill" style="width:70%"></div></div><span class="val">3</span></div>
+        <div class="bar"><span>GIFs</span><div class="track"><div class="fill" style="width:50%;background:var(--bar-a)"></div></div><span class="val">4</span></div>
+        <div class="bar"><span>Images</span><div class="track"><div class="fill" style="width:38%;background:var(--bar-a)"></div></div><span class="val">5</span></div>
+        <div class="bar"><span>Text</span><div class="track"><div class="fill" style="width:22%;background:var(--bar-a)"></div></div><span class="val">6</span></div>
+      </div>
+      <p class="note">Short vertical video (TikTok, Reels, Shorts) is what platforms push hardest today. Bar length shows rank, not measured data.</p></div>`,
+    source:`<div class="grid g3">
+      <div class="card"><span class="tag t-bad">Most expensive</span><h3>Original</h3><p>Made just for social.</p></div>
+      <div class="card"><span class="tag t-good">Saves money</span><h3>Repurposed</h3><p>Cut a webinar into clips; turn a blog post into a carousel.</p></div>
+      <div class="card"><span class="tag t-warn">Engaging, some risk</span><h3>User-generated</h3><p>Customers' photos and reviews. Get permission; you give up some control.</p></div>
+      <div class="card"><span class="tag t-paid">Borrowed audience</span><h3>Co-created</h3><p>Made with an influencer or partner brand, so you reach their followers.</p></div>
+      <div class="card"><span class="tag t-good">Cheapest</span><h3>Curated</h3><p>Share good content from others.</p></div></div>`,
+    style:`<div class="card"><p style="margin-bottom:10px">Several people will post for the brand, and it should sound like one voice. A style guide covers:</p>
+      <ul style="margin:0;padding-left:20px;color:var(--ink-2)"><li><b>Tone:</b> formal or casual, playful or serious.</li><li><b>Responding:</b> how fast, who answers, how to handle complaints.</li><li><b>Posting:</b> topics, formats, what never to post.</li><li><b>Anything else</b> that keeps posts on message.</li></ul>
+      <details><summary>Try it: an angry customer comments publicly. What should the brand do?</summary>Reply quickly and politely in public so others see you care, then move the details to a private message. Never argue in the comments.</details></div>`
+  };
+  const cp=document.getElementById('cpanel'), ct=document.querySelectorAll('#ctabs button');
+  ct.forEach(b=>b.onclick=()=>{ct.forEach(x=>x.setAttribute('aria-selected',x===b)); cp.innerHTML=panels[b.dataset.t];});
+  cp.innerHTML=panels.value;
+
+  // engagement calc
+  const ids=['er-reach','er-likes','er-com','er-sh','er-sv'];
+  function er(){
+    const [r,l,c,s,v]=ids.map(i=>Math.max(0,+document.getElementById(i).value||0));
+    const tot=l+c+s+v; const rate=r>0?tot/r*100:0;
+    document.getElementById('er-out').textContent=rate.toFixed(1)+'%';
+    const deep=tot?Math.round((s+v)/tot*100):0;
+    document.getElementById('er-mix').textContent=`${tot.toLocaleString()} total engagements. ${deep}% are shares or saves, the strongest signals that the post was worth something.`;
+  }
+  ids.forEach(i=>document.getElementById(i).addEventListener('input',er)); er();
+
+  // virality
+  const pf=document.getElementById('pf'), n=document.getElementById('n'), pv=document.getElementById('pv');
+  function vir(){
+    const a=+pf.value/100, b=+n.value, c=+pv.value/100, x=a*b*c;
+    document.getElementById('pfV').textContent=pf.value+'%';
+    document.getElementById('nV').textContent=b;
+    document.getElementById('pvV').textContent=pv.value+'%';
+    document.getElementById('xOut').textContent=x.toFixed(2);
+    const v=document.getElementById('xVerdict');
+    if(x>1){v.textContent='Above 1: it spreads';v.style.background='var(--good-soft)';v.style.color='var(--good)';}
+    else if(x===1){v.textContent='Exactly 1: it holds steady';v.style.background='var(--warn-soft)';v.style.color='var(--warn)';}
+    else {v.textContent='Below 1: it fades out';v.style.background='var(--bad-soft)';v.style.color='var(--bad)';}
+    const g=[]; let cur=1000; for(let i=0;i<6;i++){g.push(cur); cur=cur*x;}
+    const mx=Math.max(...g,1);
+    document.getElementById('gens').innerHTML=g.map((val,i)=>`<div class="bar"><span>Round ${i+1}</span><div class="track"><div class="fill" style="width:${Math.max(val/mx*100,0.5)}%;background:${x>1?'var(--bar-b)':'var(--bar-a)'}"></div></div><span class="val" style="font-size:12px">${val>=1e6?(val/1e6).toFixed(1)+'M':val>=1e3?(val/1e3).toFixed(1)+'k':Math.round(val)}</span></div>`).join('');
+  }
+  [pf,n,pv].forEach(e=>e.addEventListener('input',vir));
+  document.getElementById('vReset').onclick=()=>{pf.value=5;n.value=200;pv.value=15;vir();};
+  vir();
+
+  // WOM curves (approximate)
+  const X=d=>50+(d-1)*(570/28), Y=v=>220-v*60;
+  function path(f){let s='';for(let d=1;d<=29;d+=0.5){s+=(s?'L':'M')+X(d).toFixed(1)+','+Y(f(d)).toFixed(1);}return s;}
+  document.getElementById('wRef').setAttribute('d',path(d=>2.2*Math.exp(-(d-1)/6.5)));
+  document.getElementById('wMed').setAttribute('d',path(d=>Math.max(0,1.05*Math.exp(-(d-1)/1.3))));
+  document.getElementById('wEvt').setAttribute('d',path(d=>Math.max(0,1.25*Math.exp(-(d-1)/2.2))));
+
+  // cases
+  const cases=[
+    {name:"Nomatic",what:"Premium travel backpacks ($200+). Started with a hugely successful Kickstarter.",
+     ans:[["Objective","New customers through ads. It's too new for a loyalty focus, and Kickstarter press already earned links, so SEO is low priority. Second: monitoring, because quick replies make a new brand look trustworthy at a high price."],
+          ["Platform","Facebook and Instagram first. YouTube for video. Test TikTok travel and \"what's in my bag\" videos. LinkedIn fits business travelers but is expensive. Snapchat is unlikely."],
+          ["Content","Video. The selling point is dozens of clever features, and a still photo can't show them."],
+          ["Distribution","Target frequent travelers and business professionals; let video viewers who watched most of the ad see a follow-up ad."],
+          ["Metrics","Video watch time and completion rate, click-through rate, conversion rate."]]},
+    {name:"KiwiCo",what:"Monthly boxes of science and art projects for kids. A subscription.",
+     ans:[["Objective","New customers through ads. The subscription already builds loyalty, and almost nobody searches for this product, so SEO is weak."],
+          ["Platform","Facebook (parents), Pinterest (planning-minded parents), YouTube if they can make good video. Instagram is a maybe."],
+          ["Content","A simple image works: \"hands-on projects delivered every month\" is easy to show."],
+          ["Distribution","Different parents want different things: curiosity, better grades, or an easy screen-free afternoon. Write a separate ad for each motivation and let the platform find who responds."],
+          ["Metrics","Click-through rate, conversion rate, cost per new subscriber."]]},
+    {name:"Nuxiba",what:"Cloud software that helps call centers run more efficiently. Sold business to business.",
+     ans:[["Objective","New customers, and here posting can work. A call-center manager won't buy big software from one ad, but will read useful articles and remember who wrote them."],
+          ["Platform","LinkedIn first. Facebook only if it doesn't pull effort away from LinkedIn."],
+          ["Content","Articles and white papers on running a call center better. Nuxiba already knows the best practices."],
+          ["Distribution","Learn how LinkedIn promotes posts and articles (more in Chapter 10); share through employees' profiles too."],
+          ["Metrics","Readers per article and the share of readers who become leads."]]}
+  ];
+  const steps=["Objective","Platform","Content","Distribution","Metrics"];
+  document.getElementById('caseList').innerHTML=cases.map((c,i)=>`
+    <div class="card" style="margin-bottom:14px">
+      <div class="case-head"><h3 style="font-size:20px">${c.name}</h3><span class="tag t-paid">Case ${i+1}</span></div>
+      <p>${c.what}</p>
+      <div class="plan-grid">${steps.map(s=>`<div><label for="c${i}${s}">${s}</label><textarea id="c${i}${s}" rows="2" placeholder="Your idea"></textarea></div>`).join('')}</div>
+      <details><summary>Compare with a suggested plan</summary><ul>${c.ans.map(([k,v])=>`<li><b>${k}:</b> ${v}</li>`).join('')}</ul></details>
+    </div>`).join('')+`<div class="thought"><b>Notice the pattern:</b> the two consumer brands should buy ads. The B2B brand can earn attention with expertise. The objective and the customer decide the plan, not the platform.</div>`;
+
+  // quiz
+  const Q=[
+    ["Which social media activity is usually the most reliable way to find new customers?",["Posting on the company profile","Targeted social media ads","Social listening","Running contests"],1,"Ads reach people who don't follow you, and you choose who sees them."],
+    ["A customer's unpaid TikTok review of your product is…",["Paid media","Owned media","Earned media","Not media"],2,"Someone else gave you the exposure, so it's earned."],
+    ["What is the first step in a social media plan?",["Choose the platform","Plan the content","Determine the objective","Pick the metrics"],2,"Everything else, including the platform, follows from the objective."],
+    ["A post reaches 10,000 people and gets 300 likes, 50 comments, 100 shares and 50 saves. What's the engagement rate?",["3%","4.5%","5%","500%"],2,"(300 + 50 + 100 + 50) ÷ 10,000 = 500 ÷ 10,000 = 5%."],
+    ["Why is total followers called a vanity metric?",["It's hard to measure","It looks impressive but rarely tracks profit","Platforms hide it","It only counts likes"],1,"A big follower count doesn't mean the account is driving sales."],
+    ["In X = pf × N × pv, if pf = 2%, N = 100 and pv = 25%, will the video spread?",["Yes, X = 2","No, X = 0.5","Yes, X = 1.27","No, X = 0"],1,"0.02 × 100 × 0.25 = 0.5. Below 1, so views shrink each round."],
+    ["Tucker's study found that the most viral video ads were…",["Also the most persuasive","Less persuasive","No different","Always outrageous"],1,"More views went with less persuasion, though humor and strong visuals held up better."],
+    ["For a B2B software company selling to call-center managers, the best first platform is usually…",["Snapchat","Pinterest","LinkedIn","TikTok"],2,"LinkedIn is where business decision makers read about their work."]
+  ];
+  const ql=document.getElementById('qList'); let qs=0;
+  function buildQuiz(){
+    qs=0; document.getElementById('qScore').textContent='Score: 0 / '+Q.length;
+    ql.innerHTML='';
+    Q.forEach(([q,opts,a,why],i)=>{
+      const d=document.createElement('div'); d.className='q';
+      d.innerHTML=`<p>${i+1}. ${q}</p><div class="opts"></div><div class="fb" style="margin-top:8px"></div>`;
+      const o=d.querySelector('.opts'), fb=d.querySelector('.fb');
+      opts.forEach((t,j)=>{const b=document.createElement('button'); b.textContent=t;
+        b.onclick=()=>{o.querySelectorAll('button').forEach((x,k)=>{x.disabled=true; if(k===a) x.classList.add('right');});
+          if(j!==a) b.classList.add('wrong'); else qs++;
+          fb.textContent=(j===a?'Correct. ':'Not quite. ')+why; fb.classList.add('show');
+          document.getElementById('qScore').textContent='Score: '+qs+' / '+Q.length;};
+        o.appendChild(b);});
+      ql.appendChild(d);
+    });
+  }
+  document.getElementById('qReset').onclick=buildQuiz; buildQuiz();
+})();
+</script>
+</body>
+</html>
